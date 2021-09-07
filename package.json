@@ -1,0 +1,11 @@
+{
+  "name": "piboteau_3_07092021",
+  "version": "1.0.0",
+  "description": "Projet OC Ohmyfood  avec pour objectif de maitriser Sass et les animations",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:public/css/style.css"
+  },
+  "author": "",
+  "license": "ISC"
+}
