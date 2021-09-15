@@ -2,6 +2,15 @@
 @import "./utils/variables";
 @import "./utils/mixin";
 
+@keyframes itemlaunch{
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
 * {
     box-sizing: border-box;
     font-size: 15px;
@@ -70,9 +79,22 @@ header{
         font-family: Shrikhand;
         padding-left: 1rem;
         padding-right: 2rem;
+    
+    i{
+        font-size: 30px;
     }
-    i {
-        font-size: 20px;
+    .fa-heart {
+        border-radius: 50%;
+        padding:.2rem;
+            }
+    .fa-heart::before {
+        content: "\f004";
+        transition: color 1s ease-out;
+            }
+        .fa-heart:hover::before{
+         font-weight: bold;
+        color: $secondarycolor;
+        }
     }
 
     &__button { 
@@ -113,7 +135,7 @@ header{
     &__item{
         display: flex;
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: space-between;
         align-items: end;
         background-color: white;
@@ -122,35 +144,81 @@ header{
         border-radius:15px;
         margin-bottom: 1rem;
         margin-top: 1rem;
+        transform-origin: top;
+        transition: all 0.5s ease-in-out;
+        animation: itemlaunch 0.9s;
+        animation-timing-function: cubic-bezier(.66,.27,.17,.88);
+        animation-fill-mode: both;
+        transform: scale(0);
+        overflow: hidden;
+        max-width: 100%;
+        cursor: pointer;
         @include card_shadow;
+
         h4{
             padding-left: 1rem;
             margin-top: -0.5rem;
             margin-bottom: -0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         p{
             font-weight: lighter;
             padding-left: 1rem;
-        }
-        &__price
-        {
-            margin-bottom: 1rem;
-            padding-right: 2rem;
-            
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 250px;
+            min-width: 230px;
         }
 
-        &__price:hover
-        {
-            padding-right: 4rem;
+        &__price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 1rem;
         }
-        &__confirmation
-        {
-            position: absolute;
-            left: -250px;
+
+        &__confirmation {
+        background-color: $tertiarycolor;
+        margin: -0rem -5rem -0rem 0rem;
+        width: 5rem;
+        height: 70px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
+        border-radius: 0px 15px 15px 0px;
+        padding-right: 0.5rem;
         }
-        
+
+        &:hover &__confirmation {
+        margin-right: -1rem;
+        }
+
+        &__wrapIcon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+        }
+
+        &:hover &__wrapIcon {
+        transform: rotate(0);
+        }
+
+        &__icon {
+        color: $tertiarycolor;
+        }
     }
 }
+     
 
 footer{
     background-color: rgb(51, 44, 44);
