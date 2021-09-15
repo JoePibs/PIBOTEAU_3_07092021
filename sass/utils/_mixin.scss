@@ -1,0 +1,9 @@
+@mixin boxshadow {
+    box-shadow: 0px 1px 1px #ADA8A8;
+}
+@mixin button_shadow {
+  box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
+}
+@mixin card_shadow {
+  box-shadow: 2px 1px 5px 1px rgba(226, 223, 223, 0.659);
+}

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Ohmyfood, trouvez le restaurant qu'il vous faut </title>
-    <link rel="stylesheet" href="public/css/style.css" type="text/css">
-    <script src="https://kit.fontawesome.com/7d17636476.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../public/css/menupages.css" type="text/css">
+    <script src="https://kit.fontawesome.com/f8f25cd380.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -24,21 +24,20 @@
 
     </header>
 
-    <img src="public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="Restaurant A la Francaise">
 
     <main>
-
+        <img class="image" src="../public/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+            alt="Restaurant A la Francaise">
         <section class="menu">
 
             <div class="headermenu">
                 <h2> A la française </h2>
-                <i class="fa-regular fa-heart"></i>
+                <i class="far fa-heart"></i>
             </div>
 
             <article class="submenu">
-                <div>
-                    <h3> ENTREE </h3>
-                </div>
+                <h3> ENTREES </h3>
+                <div class=submenu__border></div>
 
                 <div class="submenu__item">
                     <div class="submenu__item__description">
@@ -46,6 +45,7 @@
                         <p>aux zestes d'orange</p>
                     </div>
                     <div class="submenu__item__price">25€</div>
+
                     <div class="submenu__item__confirmation">
                         <i class=" fas fa-check"></i>
                     </div>
@@ -57,9 +57,9 @@
                         <p>Carotte,panais,topinambour</p>
                     </div>
                     <div class="submenu__item__price">35€</div>
-                    <div class="submenu__item__confirmation">
-                        <i class=" fas fa-check"></i>
-                    </div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
                 </div>
 
                 <div class="submenu__item">
@@ -68,14 +68,15 @@
                         <p>Revisitée</p>
                     </div>
                     <div class="submenu__item__price">20€</div>
-                    <div class="submenu__item__confirmation">
-                        <i class=" fas fa-check"></i>
-                    </div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
                 </div>
             </article>
             <article class="submenu">
                 <div>
                     <h3> PLATS </h3>
+                    <div class=submenu__border></div>
                 </div>
 
                 <div class="submenu__item">
@@ -84,9 +85,10 @@
                         <p>Accompagnées d'une purée de panais</p>
                     </div>
                     <div class="submenu__item__price">40€</div>
-                    <div class="submenu__item__confirmation">
-                        <i class=" fas fa-check"></i>
-                    </div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
                 </div>
 
                 <div class="submenu__item">
@@ -95,9 +97,10 @@
                         <p>Et parmentier de pommes de terre</p>
                     </div>
                     <div class="submenu__item__price">35€</div>
-                    <div class="submenu__item__confirmation">
-                        <i class=" fas fa-check"></i>
-                    </div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
                 </div>
 
                 <div class="submenu__item">
@@ -106,53 +109,58 @@
                         <p>Sur son lit de gnocchis aux légumes</p>
                     </div>
                     <div class="submenu__item__price">44€</div>
-                    <div class="submenu__item__confirmation">
-                        <i class=" fas fa-check"></i>
-                    </div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
+                </div>
+            </article>
+
+            <article class="submenu">
+                <div>
+                    <h3>DESSERTS</h3>
+                    <div class=submenu__border></div>
                 </div>
 
-                <article class="submenu">
-                    <div>
-                        <h3>DESSERTS</h3>
+                <div class="submenu__item">
+                    <div class="submenu__item__description">
+                        <h4>Pétales de violettes glacés</h4>
+                        <p>Et purée de noisettes</p>
                     </div>
-
-                    <div class="submenu__item">
-                        <div class="submenu__item__description">
-                            <h4>Pétales de violettes glacés</h4>
-                            <p>Et purée de noisettes</p>
-                        </div>
-                        <div class="submenu__item__price">18€</div>
-                        <div class="submenu__item__confirmation">
-                            <i class=" fas fa-check"></i>
-                        </div>
-                    </div>
-
-                    <div class="submenu__item">
-                        <div class="submenu__item__description">
-                            <h4>Fondant au chocolat</h4>
-                            <p>Revisité</p>
-                        </div>
-                        <div class="submenu__item__price">22€</div>
-                        <div class="submenu__item__confirmation">
-                            <i class=" fas fa-check"></i>
-                        </div>
-                    </div>
-
-                    <div class="submenu__item">
-                        <div class="submenu__item__description">
-                            <h4>Millefeuille croustillant</h4>
-                            <p>Myrtilles et pâte d’amande</p>
-                        </div>
-                        <div class="submenu__item__price">23€</div>
-                        <div class="submenu__item__confirmation">
-                            <i class=" fas fa-check"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <div class=menubutton>
-                    <h3>Commander</h3>
+                    <div class="submenu__item__price">18€</div>
                 </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
+                </div>
+
+                <div class="submenu__item">
+                    <div class="submenu__item__description">
+                        <h4>Fondant au chocolat</h4>
+                        <p>Revisité</p>
+                    </div>
+                    <div class="submenu__item__price">19€</div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
+                </div>
+
+                <div class="submenu__item">
+                    <div class="submenu__item__description">
+                        <h4>Millefeuille croustillant</h4>
+                        <p>Myrtilles et pâte d’amande</p>
+                    </div>
+                    <div class="submenu__item__price">23€</div>
+                </div>
+                <div class="submenu__item__confirmation">
+                    <i class=" fas fa-check"></i>
+                </div>
+                </div>
+            </article>
+            <div class="button">
+                <a href=""><button class="menu__button" type="button"> Commander</button></a>
+            </div>
         </section>
     </main>
 
@@ -177,3 +185,5 @@
     </footer>
 
 </body>
+
+</html>

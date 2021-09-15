@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
 
-$primarycolor:#9356DC;
-$secondarycolor:#FF79DA ;
-$tertiarycolor:#99E2D0;
+@import "./utils/variables";
+@import "./utils/mixin";
 
 * {
     box-sizing: border-box;
@@ -30,7 +29,7 @@ header {
     font-family: Shrikhand;
     display: flex;
     justify-content: center;
-    box-shadow: 0px 1px 1px #ADA8A8;
+    @include boxshadow;
 }
 
 .location{
@@ -81,7 +80,7 @@ header {
         padding:1rem;
         border-radius: 25px;
         border: none;
-        box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
+        @include button_shadow;
     }
 
     :hover{
