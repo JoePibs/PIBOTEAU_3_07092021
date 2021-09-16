@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap');
+@import "./utils/variables";
+@import "./utils/mixin";
+@import "./utils/animation";
+
+
+
+* {
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+html, body {
+    margin: 0;
+    width: 100%;
+    max-width: 1400px;
+    font-family: Roboto;}
+
+h1, h2 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    i{
+        font-size: 20px;
+        padding-left: 1rem;
+    }
+    h1 {
+        font-family: Shrikhand;
+
+    }
+    
+}
+
+.header__logo{
+
+    margin-left: auto;
+    margin-right: auto;
+}
+.image
+{
+    width: 100%;
+    max-width: 100%;
+    max-height: 300px;
+    position: relative;
+    @media (min-width: 602px) {
+    max-height: 700px;
+    position: relative;
+    z-index: 0;}
+}
+.menu
+{
+    position: relative;
+    z-index:1;
+    width: 100%;
+    background-color: #f6f6f6;
+    border-radius: 2rem 2rem 0 0;
+    margin-top: -4rem;
+    padding-bottom: 2rem;
+    height: auto;
+    @media (min-width: 602px) {
+        margin-top: -10rem;}
+        
+
+    .headermenu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        font-family: Shrikhand;
+        padding-left: 1rem;
+        padding-right: 2rem;
+    
+    i{
+        font-size: 30px;
+    }
+    .fa-heart {
+        border-radius: 50%;
+        padding:.2rem;
+            }
+    .fa-heart::before {
+        content: "\f004";
+        transition: color 1s ease-out;
+            }
+        .fa-heart:hover::before{
+         font-weight: bold;
+        color: $secondarycolor;
+        }
+    }
+
+    &__button { 
+        background: linear-gradient(56deg,$secondarycolor,$primarycolor);
+        color: white ;
+        padding : 0.8rem 2.5rem 0.8rem 2.5rem;
+        border-radius: 25px;
+        border: none;
+        @include button_shadow;
+}
+}
+.button{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem ;
+    width: 130px;
+}
+
+.submenu {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @media (min-width: 602px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;}
+    
+
+
+    h3{
+        font-weight: lighter;
+        position: relative;
+        width: 100%;
+    }
+    &__border{
+        height: 2px;
+        width: 40px;
+        max-width: 100%;
+        background-color: $tertiarycolor;
+        margin-top: -0.5rem;
+
+    }
+
+    &__item{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: end;
+        background-color: white;
+        width: 100%;
+        height: 70px;
+        border-radius:15px;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+        transform-origin: top;
+        transition: all 0.5s ease-in-out;
+        animation: itemlaunch 0.9s;
+        animation-timing-function: cubic-bezier(.66,.27,.17,.88);
+        animation-fill-mode: both;
+        transform: scale(0);
+        overflow: hidden;
+        max-width: 100%;
+        cursor: pointer;
+        @include card_shadow;
+        @media (min-width: 602px) {
+            flex-wrap: wrap;
+            width: 40%;}
+
+        h4{
+            padding-left: 1rem;
+            margin-top: -0.5rem;
+            margin-bottom: -0.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        p{
+            font-weight: lighter;
+            padding-left: 1rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 250px;
+            min-width: 230px;
+        }
+
+        &__price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-bottom: 1rem;
+        }
+
+        &__confirmation {
+        background-color: $tertiarycolor;
+        margin: -0rem -5rem -0rem 0rem;
+        width: 5rem;
+        height: 70px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        transition-duration: 0.5s;
+        border-radius: 0px 15px 15px 0px;
+        padding-right: 0.5rem;
+        }
+
+        &:hover &__confirmation {
+        margin-right: -1rem;
+        }
+
+        &__wrapIcon {
+        height: 1.6rem;
+        width: 1.6rem;
+        background-color: white;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        border-radius: 100px;
+        transform: rotate(180deg);
+        transition-duration: 0.5s;
+        }
+
+        &:hover &__wrapIcon {
+        transform: rotate(0);
+        }
+
+        &__icon {
+        color: $tertiarycolor;
+        }
+
+    }
+}
+     
+
+footer{
+    background-color: rgb(51, 44, 44);
+    padding-left: 2rem;
+}
+
+.footer{
+    color: #eaeaea;
+    padding-top: 2rem;
+    padding-bottom:1rem;
+    &__logo{
+        font-family: Shrikhand;
+    }
+    &__list{
+        list-style: none;
+        margin-left: -2.3rem;
+        i{
+            margin-right:1rem;
+        }
+        li{
+            margin-bottom: 1rem;
+        }
+    }
+}
