@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 602px) {
+  .main__img {
+    height: 420px;
+    overflow: hidden;
+  }
+}
+
 @keyframes loader {
   100% {
     opacity: 0;
@@ -35,14 +47,14 @@
   font-size: 15px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
-  width: 100%;
-  max-width: 100%;
   font-family: Roboto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.5rem;
 }
 
@@ -94,7 +106,9 @@ header {
   font-family: Shrikhand;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 1px 1px #ADA8A8;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 8px 16px #ada8a8;
 }
 
 .location {
@@ -154,6 +168,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .operating h2 {
   width: 100%;
@@ -196,7 +211,7 @@ header {
 }
 @media (min-width: 602px) {
   .operating__menu {
-    width: 31%;
+    width: 25%;
   }
 }
 
