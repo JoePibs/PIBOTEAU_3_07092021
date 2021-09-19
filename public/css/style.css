@@ -158,8 +158,7 @@ header {
   border: none;
   box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
 }
-
-.about a :hover {
+.about__button:hover {
   cursor: pointer;
   transform: scale(1.02);
 }
