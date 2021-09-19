@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 602px) {
+  .main__img {
+    height: 420px;
+    overflow: hidden;
+  }
+}
+
 @keyframes loader {
   100% {
     opacity: 0;
@@ -35,14 +47,14 @@
   font-size: 15px;
 }
 
-html, body {
+html,
+body {
   margin: 0;
-  width: 100%;
-  max-width: 100%;
   font-family: Roboto;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 1.5rem;
 }
 
@@ -94,7 +106,9 @@ header {
   font-family: Shrikhand;
   display: flex;
   justify-content: center;
-  box-shadow: 0px 1px 1px #ADA8A8;
+  z-index: 2;
+  position: relative;
+  box-shadow: 0px 8px 16px #ada8a8;
 }
 
 .location {
@@ -144,7 +158,8 @@ header {
   border: none;
   box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
 }
-.about :hover {
+
+.about a :hover {
   cursor: pointer;
   transform: scale(1.02);
 }
@@ -154,6 +169,7 @@ header {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 .operating h2 {
   width: 100%;
@@ -178,11 +194,11 @@ header {
 }
 .operating__menu__step {
   background-color: #9356DC;
-  border-radius: 50%;
-  padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+  border-radius: 100%;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
   position: absolute;
   color: white;
-  margin-left: -0.7rem;
+  margin-left: -0.9rem;
 }
 .operating__menu i {
   margin-left: 2rem;
@@ -196,7 +212,7 @@ header {
 }
 @media (min-width: 602px) {
   .operating__menu {
-    width: 31%;
+    width: 25%;
   }
 }
 
@@ -239,6 +255,7 @@ header {
   position: absolute;
   right: 30px;
   bottom: 30px;
+  cursor: pointer;
 }
 .cards__content__like i {
   font-size: 30px;
@@ -252,6 +269,10 @@ header {
   transition: color 1s ease-out;
 }
 .cards__content__like .fa-heart:hover::before {
+  font-weight: bold;
+  color: #FF79DA;
+}
+.cards__content__like .fa-heart:active::after {
   font-weight: bold;
   color: #FF79DA;
 }
