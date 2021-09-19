@@ -259,6 +259,18 @@ header h1 {
     font-size: 0.9rem;
   }
 }
+@media screen and (min-width: 803px) {
+  .submenu__item__price {
+    font-size: 0.9rem;
+    left: 10%;
+  }
+}
+@media screen and (min-width: 1150px) {
+  .submenu__item__price {
+    font-size: 0.9rem;
+    left: 16%;
+  }
+}
 .submenu__item__confirmation {
   background-color: #99E2D0;
   margin: 0rem -5rem 0rem 0rem;

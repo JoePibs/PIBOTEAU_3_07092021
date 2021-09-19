@@ -158,7 +158,8 @@ header {
   border: none;
   box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
 }
-.about :hover {
+
+.about a :hover {
   cursor: pointer;
   transform: scale(1.02);
 }
@@ -193,11 +194,11 @@ header {
 }
 .operating__menu__step {
   background-color: #9356DC;
-  border-radius: 50%;
-  padding: 0.3rem 0.4rem 0.3rem 0.4rem;
+  border-radius: 100%;
+  padding: 0.4rem 0.6rem 0.4rem 0.6rem;
   position: absolute;
   color: white;
-  margin-left: -0.7rem;
+  margin-left: -0.9rem;
 }
 .operating__menu i {
   margin-left: 2rem;
@@ -254,6 +255,7 @@ header {
   position: absolute;
   right: 30px;
   bottom: 30px;
+  cursor: pointer;
 }
 .cards__content__like i {
   font-size: 30px;
@@ -267,6 +269,10 @@ header {
   transition: color 1s ease-out;
 }
 .cards__content__like .fa-heart:hover::before {
+  font-weight: bold;
+  color: #FF79DA;
+}
+.cards__content__like .fa-heart:active::after {
   font-weight: bold;
   color: #FF79DA;
 }
