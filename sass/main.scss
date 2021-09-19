@@ -131,11 +131,10 @@ header {
         border-radius: 25px;
         border: none;
         @include button_shadow;
+        &:hover{
+        cursor: pointer;
+        transform: scale(1.02);}
     }
-}
-.about a :hover{
-    cursor: pointer;
-    transform: scale(1.02);
 }
 
 .operating {
