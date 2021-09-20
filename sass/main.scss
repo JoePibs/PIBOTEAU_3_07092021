@@ -309,8 +309,22 @@ footer {
     padding-top: 2rem;
     padding-bottom: 1rem;
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        @media screen and (min-width:602px) {
+            align-items: center;
+        }
+    }
+
     &__logo {
         font-family: Shrikhand;
+        font-size: 2rem;
+        letter-spacing: 0.5rem;
+
+        @media screen and (min-width:602px) {
+            font-size: 4rem;
+        }
     }
 
     &__list {
