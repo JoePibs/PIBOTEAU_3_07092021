@@ -151,12 +151,8 @@ header {
         border-radius: 15px;
         margin-bottom: 1rem;
         margin-top: 1rem;
-        transform-origin: top;
-        transition: all 0.5s ease-in-out;
         animation: itemlaunch 0.9s;
         animation-timing-function: cubic-bezier(.66, .27, .17, .88);
-        animation-fill-mode: both;
-        transform: scale(0);
         overflow: hidden;
         max-width: 100%;
         cursor: pointer;

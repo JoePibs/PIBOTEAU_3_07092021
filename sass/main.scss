@@ -117,9 +117,8 @@ header {
         transform: scale(1.02); 
         background: linear-gradient(
             56deg,
-            darken($secondarycolor, 12%) 13%,
-            darken($primarycolor, 12%) 100%
-          );
+            darken($secondarycolor, 12%) 15%,
+            darken($primarycolor, 12%) 100%);
           @include boxshadow2;
     }
     }
