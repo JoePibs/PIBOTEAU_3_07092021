@@ -95,6 +95,16 @@ header {
         border-radius: 25px;
         border: none;
         @include button_shadow;
+        &:hover{
+        cursor: pointer;
+        transform: scale(1.02); 
+        background: linear-gradient(
+            56deg,
+            darken($secondarycolor, 12%) 13%,
+            darken($primarycolor, 12%) 100%
+          );
+          @include boxshadow2;
+        }
     }
 }
 
