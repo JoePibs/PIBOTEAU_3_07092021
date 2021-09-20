@@ -71,7 +71,7 @@ a {
   width: 100%;
   left: 0;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.98);
   animation: loader 0.01s;
   animation-delay: 2.3s;
   animation-fill-mode: both;
@@ -215,6 +215,11 @@ header {
   .operating__menu {
     width: 25%;
   }
+}
+
+.operating__menu:hover {
+  background-color: #9256dc1f;
+  cursor: pointer;
 }
 
 .cards {
