@@ -106,20 +106,15 @@ header {
     }
 
     &__button {
-        background: linear-gradient(56deg, $secondarycolor, $primarycolor);
+        @include button_background;
         color: white;
         padding: 1rem;
         border-radius: 25px;
         border: none;
         @include button_shadow;
         &:hover{
-        cursor: pointer;
-        transform: scale(1.02); 
-        background: linear-gradient(
-            56deg,
-            darken($secondarycolor, 12%) 15%,
-            darken($primarycolor, 12%) 100%);
-          @include boxshadow2;
+        @include button_hover;
+        @include boxshadow2;
     }
     }
 }
@@ -181,7 +176,7 @@ header {
 }
 .operating__menu:hover{
     background-color: #9256dc1f;
-cursor: pointer;}
+    cursor: pointer;}
 
 .cards {
     width: 100%;
@@ -273,7 +268,7 @@ cursor: pointer;}
                 border-radius: 10px 10px 0px 0px;
             }
 
-        &__new {
+            &__new {
                 font-size: 0.85rem;
                 font-weight: 500;
                 position: absolute;

@@ -26,3 +26,15 @@
       }
   }
 }
+@mixin button_background{
+  background: linear-gradient(56deg, $secondarycolor, $primarycolor);
+}
+
+@mixin button_hover{
+cursor: pointer;
+transform: scale(1.02); 
+background: linear-gradient(
+    56deg,
+    darken($secondarycolor, 12%) 13%,
+    darken($primarycolor, 12%) 100%)
+  }
