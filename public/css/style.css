@@ -83,13 +83,11 @@ a {
 .loader__item {
   height: 1rem;
   width: 1rem;
+  margin-right: 2.3rem;
   border-radius: 1rem;
   animation: jump 2s;
   animation-iteration-count: 2;
-}
-.loader__item__container {
   display: flex;
-  width: 5rem;
   justify-content: space-between;
 }
 .loader__item--1 {
