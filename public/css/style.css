@@ -1,22 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-.main {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
-}
-@media (min-width: 602px) {
-  .main__img {
-    height: 420px;
-    overflow: hidden;
-  }
-}
-
+/* Color */
+/* specific shadow*/
+/* Button*/
+/* "erase" the loader*/
 @keyframes loader {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
+/* loader item animation*/
 @keyframes jump {
   0% {
     transform: translateY(0) scale(1) rotateZ(0);
@@ -34,6 +27,7 @@
     transform: translateY(0) scale(1) rotateZ(360deg);
   }
 }
+/* submenuAnimation Pages_menu*/
 @keyframes itemlaunch {
   0% {
     transform: scaleY(0);
@@ -65,6 +59,18 @@ a {
   text-decoration: none;
 }
 
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 602px) {
+  .main__img {
+    height: 420px;
+    overflow: hidden;
+  }
+}
+
 .loader {
   position: fixed;
   height: 100%;
@@ -73,6 +79,7 @@ a {
   top: 0;
   background-color: rgba(255, 255, 255, 0.98);
   animation: loader 0.01s;
+  /* Begin apparition*/
   animation-delay: 2.3s;
   animation-fill-mode: both;
   z-index: 5;
@@ -106,7 +113,6 @@ header {
   font-family: Shrikhand;
   display: flex;
   justify-content: center;
-  z-index: 2;
   position: relative;
   box-shadow: 0px 8px 16px #ada8a8;
 }

@@ -1,22 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap");
-.main {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
-}
-@media (min-width: 602px) {
-  .main__img {
-    height: 420px;
-    overflow: hidden;
-  }
-}
-
+/* Color */
+/* specific shadow*/
+/* Button*/
+/* "erase" the loader*/
 @keyframes loader {
   100% {
     opacity: 0;
     z-index: -10;
   }
 }
+/* loader item animation*/
 @keyframes jump {
   0% {
     transform: translateY(0) scale(1) rotateZ(0);
@@ -34,6 +27,7 @@
     transform: translateY(0) scale(1) rotateZ(360deg);
   }
 }
+/* submenuAnimation Pages_menu*/
 @keyframes itemlaunch {
   0% {
     transform: scaleY(0);
@@ -63,6 +57,18 @@ h2 {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+}
+@media (min-width: 602px) {
+  .main__img {
+    height: 420px;
+    overflow: hidden;
+  }
 }
 
 header {
@@ -209,6 +215,25 @@ header h1 {
   animation-timing-function: cubic-bezier(0.66, 0.27, 0.17, 0.88);
   cursor: pointer;
   box-shadow: 2px 1px 5px 1px rgba(226, 223, 223, 0.659);
+  /* Delay of menu item apparition*/
+}
+.submenu__item--2 {
+  animation-delay: 0.3s;
+}
+.submenu__item--3 {
+  animation-delay: 0.6s;
+}
+.submenu__item--5 {
+  animation-delay: 0.3s;
+}
+.submenu__item--6 {
+  animation-delay: 0.6s;
+}
+.submenu__item--8 {
+  animation-delay: 0.3s;
+}
+.submenu__item--9 {
+  animation-delay: 0.6s;
 }
 .submenu__item__description {
   flex-grow: 1;
@@ -262,24 +287,6 @@ header h1 {
   border-radius: 100px;
   background-color: white;
   padding: 0.3rem;
-}
-.submenu__item--2 {
-  animation-delay: 0.3s;
-}
-.submenu__item--3 {
-  animation-delay: 0.6s;
-}
-.submenu__item--5 {
-  animation-delay: 0.3s;
-}
-.submenu__item--6 {
-  animation-delay: 0.6s;
-}
-.submenu__item--8 {
-  animation-delay: 0.3s;
-}
-.submenu__item--9 {
-  animation-delay: 0.6s;
 }
 
 footer {
