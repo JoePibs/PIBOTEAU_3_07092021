@@ -35,6 +35,6 @@ cursor: pointer;
 transform: scale(1.02); 
 background: linear-gradient(
     56deg,
-    darken($secondarycolor, 12%) 13%,
-    darken($primarycolor, 12%) 100%)
+    lighten($secondarycolor, 2%) 13%,
+    lighten($primarycolor, 5%) 100%)
   }

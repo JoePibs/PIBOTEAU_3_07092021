@@ -163,7 +163,7 @@ header {
 .about__button:hover {
   cursor: pointer;
   transform: scale(1.02);
-  background: linear-gradient(56deg, #ff3cc9 13%, #732acb 100%);
+  background: linear-gradient(56deg, #ff83dd 13%, #a16be0 100%);
   box-shadow: 0px 8px 16px #ada8a8;
 }
 
