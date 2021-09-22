@@ -87,7 +87,7 @@ a {
   animation: jump 2s;
   animation-iteration-count: 2;
 }
-.loader__itemcontainer {
+.loader__item__container {
   display: flex;
   width: 5rem;
   justify-content: space-between;
@@ -163,7 +163,7 @@ header {
 .about__button:hover {
   cursor: pointer;
   transform: scale(1.02);
-  background: linear-gradient(56deg, #ff3cc9 15%, #732acb 100%);
+  background: linear-gradient(56deg, #ff3cc9 13%, #732acb 100%);
   box-shadow: 0px 8px 16px #ada8a8;
 }
 
@@ -242,7 +242,7 @@ header {
   margin-left: 1rem;
   width: 100%;
 }
-.cards__content {
+.cards .cardcontent {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -255,55 +255,55 @@ header {
   position: relative;
 }
 @media (min-width: 602px) {
-  .cards__content {
+  .cards .cardcontent {
     width: 40%;
   }
 }
-.cards__content__like {
+.cards .cardcontent__like {
   position: absolute;
   right: 30px;
   bottom: 30px;
   cursor: pointer;
 }
-.cards__content__like i {
+.cards .cardcontent__like i {
   font-size: 30px;
 }
-.cards__content__like .fa-heart {
+.cards .cardcontent__like .fa-heart {
   border-radius: 50%;
   padding: 0.2rem;
 }
-.cards__content__like .fa-heart::before {
+.cards .cardcontent__like .fa-heart::before {
   content: "\f004";
   transition: color 1s ease-out;
 }
-.cards__content__like .fa-heart:hover::before {
+.cards .cardcontent__like .fa-heart:hover::before {
   font-weight: bold;
   color: #FF79DA;
 }
-.cards__content__like .fa-heart:active::after {
+.cards .cardcontent__like .fa-heart:active::after {
   font-weight: bold;
   color: #FF79DA;
 }
-.cards__content__name h2 {
+.cards .cardcontent__name h2 {
   margin-bottom: 0.5rem;
   margin-left: 1rem;
 }
-.cards__content__name p {
+.cards .cardcontent__name p {
   padding-left: 1rem;
   margin-top: 0.5rem;
 }
-.cards__content .blocimage {
+.cards .cardcontent__image {
   width: 100%;
   height: 200px;
   position: relative;
 }
-.cards__content .blocimage img {
+.cards .cardcontent__image img {
   object-fit: cover;
   width: 100%;
   height: 200px;
   border-radius: 10px 10px 0px 0px;
 }
-.cards__content .blocimage__new {
+.cards .cardcontent__image__new {
   font-size: 0.85rem;
   font-weight: 500;
   position: absolute;

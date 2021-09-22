@@ -54,6 +54,9 @@ header {
     .articles {
         @media (min-width: 602px) {
             display: flex;
+            flex-wrap: wrap;
+
+        justify-content: space-around;
         }
     }
 
@@ -76,7 +79,7 @@ header {
         }
 
         .fa-heart::before {
-            content: "\f004";
+            content: "";
             transition: color 1s ease-out;
             cursor: pointer;
         }
@@ -89,21 +92,15 @@ header {
     }
 
     &__button {
-        background: linear-gradient(56deg, $secondarycolor, $primarycolor);
+        @include button_background;
         color: white;
         padding: 0.8rem 2.5rem 0.8rem 2.5rem;
         border-radius: 25px;
         border: none;
         @include button_shadow;
         &:hover{
-        cursor: pointer;
-        transform: scale(1.02); 
-        background: linear-gradient(
-            56deg,
-            darken($secondarycolor, 12%) 13%,
-            darken($primarycolor, 12%) 100%
-          );
-          @include boxshadow2;
+        @include button_hover;
+        @include boxshadow2;
         }
     }
 }
@@ -115,15 +112,16 @@ header {
     width: 130px;
 }
 
+
 .submenu {
     padding-left: 1rem;
     padding-right: 1rem;
-
+    width: 100%; 
     @media (min-width: 602px) {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
+        max-width: 49%;}
+    @media (min-width: 1023px) {
+        max-width: 32%;}      
+    
 
     h3 {
         font-weight: lighter;
@@ -138,156 +136,112 @@ header {
         background-color: $tertiarycolor;
         margin-top: -0.5rem;
     }
+}
 
-    &__item {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        align-items: flex-start;
-        background-color: white;
-        width: 100%;
-        height: 70px;
-        border-radius: 15px;
-        margin-bottom: 1rem;
-        margin-top: 1rem;
-        animation: itemlaunch 0.9s;
-        animation-timing-function: cubic-bezier(.66, .27, .17, .88);
-        overflow: hidden;
+.submenu__item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    height: 70px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    animation: itemlaunch 0.9s;
+    animation-timing-function: cubic-bezier(.66, .27, .17, .88);
+    cursor: pointer;
+    @include card_shadow;
+
+
+    &__description{
+        flex-grow: 1;
+        width: auto;
         max-width: 100%;
-        cursor: pointer;
-        @include card_shadow;
+        min-width: 70%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        
 
-        @media (min-width: 602px) {
-            flex-wrap: wrap;
+        p{
+        font-weight: lighter;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         }
 
-        h4 {
-            padding-left: 1rem;
-            margin-bottom: -0.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            @media screen and (min-width: 602px) and (max-width: 802px){
-                font-size: 0.8rem;
-                width: 150px;
-                min-width: 150px;
-            }
-            @media (min-width: 802px) {
-                font-size: smaller;
-            }
+        h4{   
+        margin-bottom: 0.2rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
         }
-
-        p {
-            font-weight: lighter;
-            padding-left: 1rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            width: 250px;
-            min-width: 230px;
-            @media screen and (min-width: 602px) and (max-width: 802px){
-                font-size: 0.7rem;
-                width: 150px;
-                min-width: 150px;
-            }
-            @media (min-width: 802px) {
-                font-size: smaller;
-                width: 180px;
-                min-width: 180px;
-            }
-        }
-
-        &__price {
-            position: relative;
-            left: 5%;
-            top:30px;
-            transition-duration: 0.5s;
-            @media screen and (min-width: 602px) and (max-width: 802px){
-                font-size: 0.9rem;
-            }
-            @media screen and (min-width: 803px) {
-                font-size: 0.9rem;
-                left: 10%;}
-            @media screen and (min-width: 1150px) {
-                font-size: 0.9rem;
-                left: 16%;}
-        }
-
-        &__confirmation {
-            background-color: $tertiarycolor;
-            margin: -0rem -5rem -0rem 0rem;
-            width: 5rem;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition-duration: 0.5s;
-            border-radius: 0px 15px 15px 0px;
-            padding-right: 0.5rem;
-            @media screen and (min-width: 602px) and (max-width: 802px){
-                margin: -0rem -4rem -0rem 0rem;
-                width: 4rem;
-            }
-            @media (min-width: 802px) {
-                flex-wrap: nowrap;
-            }
-        }
-
-        &:hover &__confirmation {
-            margin-right: -1rem;
-        }
-
-        &:hover &__price {
-            left: 0.5%;
-        }
-
-        &__wrapIcon {
-            height: 1.6rem;
-            width: 1.6rem;
-            background-color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 100px;
-            transform: rotate(180deg);
-            transition-duration: 0.5s;
-        }
-
-        &:hover &__wrapIcon {
-            transform: rotate(0);
-        }
-
-        &__icon {
-            color: $tertiarycolor;
-        }
-
-        &--2 {
-            animation-delay: 0.3s;
-        }
-
-        &--3 {
-            animation-delay: 0.6s;
-        }
-
-
-        &--5 {
-            animation-delay: 0.3s;
-        }
-
-        &--6 {
-            animation-delay: 0.6s;
-        }
-
-        &--8 {
-            animation-delay: 0.3s;
-        }
-
-        &--9 {
-            animation-delay: 0.6s;
-        }
-
     }
+
+    &__price {
+        padding: 0 10px;
+    }
+
+    &__confirmation {
+        overflow: hidden;
+        width: 0rem;
+        align-self: stretch;
+        transition: all 400ms ;
+        border-radius: 0px 15px 15px 0px;
+    }
+
+    &__confirmation > .submenu__item__wrapIcon {
+        width: 4rem;
+        background-color: $tertiarycolor;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &:hover 
+        &__confirmation {
+            width: 4rem;
+            i{
+            transform: rotate(360deg);
+            transition: all 400ms;}
+        }
+
+
+    &__icon {
+        color: $tertiarycolor;
+        transition: all 400ms;
+        transform: rotate(0);
+        border-radius: 100px;
+        background-color: white;
+        padding: 0.3rem;
+    }
+
+    &--2 {
+        animation-delay: 0.3s;
+    }
+
+    &--3 {
+        animation-delay: 0.6s;
+    }
+
+
+    &--5 {
+        animation-delay: 0.3s;
+    }
+
+    &--6 {
+        animation-delay: 0.6s;
+    }
+
+    &--8 {
+        animation-delay: 0.3s;
+    }
+
+    &--9 {
+        animation-delay: 0.6s;
+    }
+
 }
 
 
@@ -332,3 +286,4 @@ footer {
         }
     }
 }
+
