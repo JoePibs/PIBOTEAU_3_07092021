@@ -35,16 +35,16 @@
             justify-content: space-between;
         }
 
-        &--first {
+        &--1 {
             background: linear-gradient(56deg, $secondarycolor, $tertiarycolor);
         }
 
-        &--second {
+        &--2 {
             background: $primarycolor;
             animation-delay: 0.2s;
         }
 
-        &--third {
+        &--3 {
             background: linear-gradient(56deg, $primarycolor, $tertiarycolor);
             animation-delay: 0.4s;
         }

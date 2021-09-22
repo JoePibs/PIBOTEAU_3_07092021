@@ -92,14 +92,14 @@ a {
   width: 5rem;
   justify-content: space-between;
 }
-.loader__item--first {
+.loader__item--1 {
   background: linear-gradient(56deg, #FF79DA, #99E2D0);
 }
-.loader__item--second {
+.loader__item--2 {
   background: #9356DC;
   animation-delay: 0.2s;
 }
-.loader__item--third {
+.loader__item--3 {
   background: linear-gradient(56deg, #9356DC, #99E2D0);
   animation-delay: 0.4s;
 }
