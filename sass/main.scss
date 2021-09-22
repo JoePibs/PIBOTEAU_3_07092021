@@ -7,6 +7,7 @@
 
 
 
+ 
 .loader {
     position: fixed;
     height: 100%;
@@ -14,7 +15,7 @@
     left: 0;
     top: 0;
     background-color: rgba(255, 255, 255, 0.98);
-    animation: loader 0.01s;
+    animation: loader 0.01s; /* Begin apparition*/
     animation-delay: 2.3s;
     animation-fill-mode: both;
     z-index: 5;
@@ -52,7 +53,6 @@ header {
     font-family: Shrikhand;
     display: flex;
     justify-content: center;
-    z-index: 2;
     position: relative;
     @include boxshadow2;
 }
@@ -144,8 +144,6 @@ header {
         @media (min-width: 602px) {
             margin-left: 1rem;
         }
-
-        
 
         &__step {
             background-color: #9356DC;

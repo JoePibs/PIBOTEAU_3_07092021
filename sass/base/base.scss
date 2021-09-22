@@ -18,3 +18,16 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+.main {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1440px;
+  
+    &__img {
+        @media (min-width: 602px) {
+            height: 420px;
+            overflow: hidden;
+        }
+    }
+  }

@@ -1,3 +1,5 @@
+ /* specific shadow*/
+
 @mixin boxshadow {
   box-shadow: 0px 1px 1px #ADA8A8;
 }
@@ -6,25 +8,13 @@
   box-shadow: 0px 8px 16px #ada8a8;
 }
 
-@mixin button_shadow {
-  box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
-}
-
 @mixin card_shadow {
   box-shadow: 2px 1px 5px 1px rgba(226, 223, 223, 0.659);
 }
 
-.main {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1440px;
-
-  &__img {
-      @media (min-width: 602px) {
-          height: 420px;
-          overflow: hidden;
-      }
-  }
+ /* Button*/
+@mixin button_shadow {
+  box-shadow: 5px 4px 5px 1px rgba(226, 223, 223, 0.659);
 }
 @mixin button_background{
   background: linear-gradient(56deg, $secondarycolor, $primarycolor);
@@ -38,3 +28,7 @@ background: linear-gradient(
     lighten($secondarycolor, 2%) 13%,
     lighten($primarycolor, 5%) 100%)
   }
+
+
+
+ 

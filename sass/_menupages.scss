@@ -153,6 +153,32 @@ header {
     cursor: pointer;
     @include card_shadow;
 
+ /* Delay of menu item apparition*/
+    &--2 {
+        animation-delay: 0.3s;
+    }
+
+    &--3 {
+        animation-delay: 0.6s;
+    }
+
+
+    &--5 {
+        animation-delay: 0.3s;
+    }
+
+    &--6 {
+        animation-delay: 0.6s;
+    }
+
+    &--8 {
+        animation-delay: 0.3s;
+    }
+
+    &--9 {
+        animation-delay: 0.6s;
+    }
+
 
     &__description{
         flex-grow: 1;
@@ -217,30 +243,6 @@ header {
         padding: 0.3rem;
     }
 
-    &--2 {
-        animation-delay: 0.3s;
-    }
-
-    &--3 {
-        animation-delay: 0.6s;
-    }
-
-
-    &--5 {
-        animation-delay: 0.3s;
-    }
-
-    &--6 {
-        animation-delay: 0.6s;
-    }
-
-    &--8 {
-        animation-delay: 0.3s;
-    }
-
-    &--9 {
-        animation-delay: 0.6s;
-    }
 
 }
 
